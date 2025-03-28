@@ -1,0 +1,52 @@
+package org.example
+
+ //chp 5 Strings
+fun main(args: Array<String>) {
+
+    val name: String ="Coding Ambitions"
+     println(name)
+
+    val multilineString = """ 
+        Coding
+        Ambitions
+    """.trimIndent()
+     println(multilineString) // String literal
+
+     val escapedString = "This is an\" escaped\" string" //String literal
+     println(escapedString)
+
+     val country = "India"
+     println("My name is $name and My country is $country")//String template $ no { }
+     println ("my name length is ${name.length}") //more complex { }
+
+     //useful methods
+    // println(name.length)
+    // println(name[0])
+     //println(name.substring(0,7))
+    // println(name.contains("coding",ignoreCase = true))
+    // println(name.replace("Coding","Kotlin"))
+     //println(name.uppercase())
+     //println(name.lowercase())
+    // println(name.isEmpty())
+   // println(name.isBlank())
+    // println(name.isNullOrBlank())
+    // println(name.isNullOrEmpty())
+
+     // StringBuilder,StringBuffer
+     // StringBuilder is not thread safe only use in 1 thread use synchronized for multiple strings
+     //stringBuffer is Thread safe can access from multiple threads
+     val sb = StringBuilder("Hello ")
+     sb.append("World ", "Hi, Kotlin")
+     sb.insert(0, "Hi ")
+     println(sb)
+
+}
+
+//Strings are immutable
+//Each time We add new value to variable new object is created
+//String Builder,String Buffer are mutable can be changed in place
+
+
+
+
+
